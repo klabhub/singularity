@@ -2,8 +2,8 @@ Bootstrap:docker
 From:ubuntu:18.04
 
 %post
-apt-get update
-apt-get install wget 
+apt-get -y update
+apt-get -y install wget 
 
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda3.sh
 # Install conda in batch mode to ~/conda
