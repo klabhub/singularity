@@ -11,6 +11,9 @@ bash miniconda3.sh -bp ~/conda
 
 # Set up conda shell scripts on login (* see CONDA ACTIVATION note below)
 echo ". ~/conda/etc/profile.d/conda.sh" >> ~/.bashrc
+
+source ~/.bashrc
+
 # activate the ‘base' conda environment
 conda activate base
 
