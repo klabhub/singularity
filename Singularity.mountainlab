@@ -1,0 +1,25 @@
+Bootstrap:docker
+From:ubuntu:18.04
+
+%post
+
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda3.sh
+# Install conda in batch mode to ~/conda
+bash miniconda3.sh -bp ~/conda
+
+# Set up conda shell scripts on login (* see CONDA ACTIVATION note below)
+echo ". ~/conda/etc/profile.d/conda.sh" >> ~/.bashrc
+# activate the ‘base' conda environment
+conda activate base
+
+# have conda update itself
+conda update conda
+
+conda create -n mountainlab
+conda activate mountainlab
+conda install -c flatiron -c conda-forge mountainlab mountainlab_pytools
+
+
+%runscript
+
+    exec echo "You say please, but all I see is pizza.."
