@@ -58,4 +58,4 @@ From:neurodebian:latest
     This is DataLad for Neuroimaging. Run with --help for more info.
 
 %test
-    datalad test datalad_neuroimaging
+    #datalad test datalad_neuroimaging
