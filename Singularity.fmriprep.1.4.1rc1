@@ -1,6 +1,6 @@
 #
 Bootstrap: docker
-From: poldracklab/fmriprep:1.5.0
+From: poldracklab/fmriprep:1.4.1.rc1
 
 %post
 
@@ -8,4 +8,3 @@ From: poldracklab/fmriprep:1.5.0
 %environment
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-latest
