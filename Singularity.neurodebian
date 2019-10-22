@@ -1,0 +1,47 @@
+# Neurodebian , with
+# FSL
+# AFNI
+# datalad
+
+Bootstrap:docker
+From:neurodebian:latest
+
+%post
+    echo "Neuro packages"
+    sudo apt-get install fsl-core
+    sudo apt-get install afni
+    sudo apt-get install heudiconv
+
+    echo "Configuring the datalad environment"
+    apt-get -y update
+
+    # setup the container sources themselves
+    apt-get -y install eatmydata
+    eatmydata apt-get -y install gnupg wget locales
+
+    # we need a UTF locale for DataLad to work properly
+    echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+    locale-gen
+
+    # bare essentials to pull everything else in
+    eatmydata apt-get -y install --no-install-recommends git git-annex-standalone python3-pip
+
+    eatmydata apt-get -y install --no-install-recommends python3-setuptools python3-wheel less rsync git-remote-gcrypt aria2 libexempi3 python3-libxmp
+
+    # just for scrapy
+    eatmydata apt-get -y install --no-install-recommends python3-twisted
+
+    pip3 install --system datalad_neuroimaging
+    
+    # gdrive annex
+    pip3 install git-annex-remote-googledrive
+    
+    
+    # clean up
+    apt-get clean
+
+
+%environments
+    unset PYTHONPATH
+
+%runscript
