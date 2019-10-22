@@ -8,9 +8,9 @@ From:neurodebian:latest
 
 %post
     echo "Neuro packages"
-    sudo apt-get install fsl-core
-    sudo apt-get install afni
-    sudo apt-get install heudiconv
+    apt-get install fsl-core
+    apt-get install afni
+    apt-get install heudiconv
 
     echo "Configuring the datalad environment"
     apt-get -y update
