@@ -8,6 +8,7 @@ From:neurodebian:latest
 
 %post
     echo "Neuro packages"
+    apt-get install wget
     
     wget -O- http://neuro.debian.net/lists/stretch.us-ca.full |  tee /etc/apt/sources.list.d/neurodebian.sources.list
     apt-key adv --recv-keys --keyserver hkp://pool.sks-keyservers.net:80 0xA5D32F012649A5A9
