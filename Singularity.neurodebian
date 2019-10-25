@@ -81,6 +81,6 @@ MirrorURL: http://http.debian.net/debian/
     mkdir -p /afs /inbox /ihome /opt /data /backup /apps /srv /scratch /idata
     chmod a+rX /afs /inbox /ihome /opt /data /backup /apps /srv /scratch /idata
 
-    apt install python3-pip
+    apt-get install python3-pip
     pip3 install --system datalad_neuroimaging
     
