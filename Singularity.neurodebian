@@ -59,6 +59,11 @@ MirrorURL: http://http.debian.net/debian/
     eatmydata apt-get -y install python-pynwb python-biosig sigviewer
     # TODO: nilearn
 
+
+
+    apt-get install python3-pip
+    pip3 install --system datalad_neuroimaging
+
     # for bids-validator
     curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
        eatmydata apt-get install -y nodejs npm
@@ -81,6 +86,4 @@ MirrorURL: http://http.debian.net/debian/
     mkdir -p /afs /inbox /ihome /opt /data /backup /apps /srv /scratch /idata
     chmod a+rX /afs /inbox /ihome /opt /data /backup /apps /srv /scratch /idata
 
-    apt-get install python3-pip
-    pip3 install --system datalad_neuroimaging
     
