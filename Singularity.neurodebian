@@ -2,5 +2,6 @@ bootstrap: docker
 from: neurodebian:latest
 
 %post
-
+apt-get install python3
+apt-get install python3-pip
 pip3 install git-annex-remote-googledrive
