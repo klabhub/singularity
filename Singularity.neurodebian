@@ -81,7 +81,7 @@ MirrorURL: http://http.debian.net/debian/
     chmod a+rX /afs /inbox /ihome /opt /data /backup /apps /srv /scratch /idata
 
     wget https://bootstrap.pypa.io/get-pip.py
-    python get-pip.py
+    python3 get-pip.py
 
      pip3 install --system datalad_neuroimaging
     
