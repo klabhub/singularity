@@ -83,5 +83,5 @@ MirrorURL: http://http.debian.net/debian/
     wget https://bootstrap.pypa.io/get-pip.py
     python3 get-pip.py
 
-     pip3 install --system datalad_neuroimaging
+    pip3 install git-annex-remote-googledrive
     
