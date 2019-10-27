@@ -80,8 +80,11 @@ MirrorURL: http://http.debian.net/debian/
     mkdir -p /afs /inbox /ihome /opt /data /backup /apps /srv /scratch /idata
     chmod a+rX /afs /inbox /ihome /opt /data /backup /apps /srv /scratch /idata
 
+    # BK Additions
+    # Install pip3
     wget https://bootstrap.pypa.io/get-pip.py
     python3 get-pip.py
-
+    # git annex for google drive
     pip3 install git-annex-remote-googledrive
+    
     
