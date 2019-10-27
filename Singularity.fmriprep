@@ -4,7 +4,11 @@ From: poldracklab/fmriprep:1.5.0
 
 %post
 
-
+ # Install pip3
+    wget https://bootstrap.pypa.io/get-pip.py
+    python3 get-pip.py
+    
+    
 # Pydeface
 
 git clone https://github.com/poldracklab/pydeface.git
