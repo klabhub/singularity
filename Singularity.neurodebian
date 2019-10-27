@@ -88,3 +88,23 @@ MirrorURL: http://http.debian.net/debian/
     pip3 install git-annex-remote-googledrive
     
     
+    # Pydeface
+    git clone https://github.com/poldracklab/pydeface.git
+    cd pydeface
+    python3 setup.py install
+
+    #MRIQC
+    pip3 install -r https://raw.githubusercontent.com/poldracklab/mriqc/master/requirements.txt
+    pip3 install git+https://github.com/poldracklab/mriqc.git
+
+    ln -sf /usr/lib/ants/N4BiasFieldCorrection /usr/local/bin/ 
+
+    echo "LC_ALL=en_US.UTF-8" >> /etc/environment
+    echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+    echo "LANG=en_US.UTF-8" > /etc/locale.conf
+
+    # fmriprep
+    pip3 install fmriprep
+     
+     %environment
+     locale-gen en_US.UTF-8
