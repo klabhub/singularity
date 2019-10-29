@@ -4,9 +4,9 @@ From: poldracklab/fmriprep:1.5.0
 
 %post
 
-apt-get install wget
+apt-get -yes install wget  
 
-apt-get install python3-setuptools
+apt-get -yes  install python3-setuptools
 
 # Install pip3
 wget https://bootstrap.pypa.io/get-pip.py
