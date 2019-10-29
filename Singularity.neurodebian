@@ -88,11 +88,4 @@ MirrorURL: http://http.debian.net/debian/
     pip3 install git-annex-remote-googledrive
     
     
-    #MRIQC
-pip3 install -r https://raw.githubusercontent.com/poldracklab/mriqc/master/requirements.txt
-pip3 install git+https://github.com/poldracklab/mriqc.git
-
-apt-get -y install fsl afni ants  --no-install-recommends apt-utils
-ln -sf /usr/lib/ants/N4BiasFieldCorrection /usr/local/bin/ 
-    
     
