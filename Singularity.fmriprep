@@ -4,7 +4,9 @@ From: poldracklab/fmriprep:1.5.0
 
 %post
 
- # Install pip3
+apt-get install wget
+
+# Install pip3
     wget https://bootstrap.pypa.io/get-pip.py
     python3 get-pip.py
     
@@ -13,7 +15,7 @@ From: poldracklab/fmriprep:1.5.0
 
 git clone https://github.com/poldracklab/pydeface.git
 cd pydeface
-python3 setup.py install
+python setup.py install
 
 
 #MRIQC
