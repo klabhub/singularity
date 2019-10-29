@@ -6,9 +6,11 @@ From: poldracklab/fmriprep:1.5.0
 
 apt-get install wget
 
+apt-get install python3-setuptools
+
 # Install pip3
-    wget https://bootstrap.pypa.io/get-pip.py
-    python3 get-pip.py
+wget https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py
     
     
 # Pydeface
@@ -16,11 +18,11 @@ apt-get install wget
 git clone https://github.com/poldracklab/pydeface.git
 cd pydeface
 python setup.py install
-
+cd ..
 
 #MRIQC
-pip install -r https://raw.githubusercontent.com/poldracklab/mriqc/master/requirements.txt
-pip install git+https://github.com/poldracklab/mriqc.git
+pip3 install -r https://raw.githubusercontent.com/poldracklab/mriqc/master/requirements.txt
+pip3 install git+https://github.com/poldracklab/mriqc.git
 
 apt-get install fsl afni ants
 ln -sf /usr/lib/ants/N4BiasFieldCorrection /usr/local/bin/ 
