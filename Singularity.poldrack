@@ -1,12 +1,12 @@
 #
 Bootstrap: docker
-From: poldracklab/fmriprep:1.5.0
+From: poldracklab/fmriprep:1.5.1rc1
 
 %post
 
-apt-get -yes install wget  
+apt-get -y install wget  
 
-apt-get -yes  install python3-setuptools
+apt-get -y  install python3-setuptools
 
 # Install pip3
 wget https://bootstrap.pypa.io/get-pip.py
@@ -24,7 +24,7 @@ cd ..
 pip3 install -r https://raw.githubusercontent.com/poldracklab/mriqc/master/requirements.txt
 pip3 install git+https://github.com/poldracklab/mriqc.git
 
-apt-get install fsl afni ants
+apt-get -y install fsl afni ants
 ln -sf /usr/lib/ants/N4BiasFieldCorrection /usr/local/bin/ 
 
 
