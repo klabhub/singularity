@@ -89,9 +89,19 @@ MirrorURL: http://http.debian.net/debian/
     
     
     # Rclone
-    apt-get install rclone
-    apt-get install git-annex-remote-rclone
     
+    export RCLONE_VERSION=current
+    export ARCH=amd64
+    apk --no-cache add ca-certificates fuse wget 
+    cd /tmp 
+    wget -q http://downloads.rclone.org/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip 
+    unzip /tmp/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip 
+    mv /tmp/rclone-*-linux-${ARCH}/rclone /usr/bin 
+    rm -r /tmp/rclone* 
     
+    cd /tmp
+    git clone https://github.com/DanielDent/git-annex-remote-rclone
+    cp git-annex-remote-rclone/git-annex-remote-rclone /usr/bin
+    rm -Rf git-annex-remote-rclone
     
     
