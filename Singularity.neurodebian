@@ -88,4 +88,10 @@ MirrorURL: http://http.debian.net/debian/
     pip3 install git-annex-remote-googledrive
     
     
+    # Rclone
+    apt-get install rclone
+    apt-get install git-annex-remote-rclone
+    
+    
+    
     
