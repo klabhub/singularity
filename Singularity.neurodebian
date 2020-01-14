@@ -93,9 +93,8 @@ MirrorURL: http://http.debian.net/debian/
     export RCLONE_VERSION=current
     export ARCH=amd64
     cd /tmp 
-    wget -q http://downloads.rclone.org/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip 
-    unzip /tmp/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip 
-    mv /tmp/rclone-*-linux-${ARCH}/rclone /usr/bin 
+    wget -q http://downloads.rclone.org/rclone-${RCLONE_VERSION}-linux-${ARCH}.deb 
+    apt-get install ./rclone-${RCLONE_VERSION}-linux-${ARCH}.deb
     rm -r /tmp/rclone* 
     
     cd /tmp
