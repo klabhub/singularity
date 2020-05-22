@@ -1,6 +1,6 @@
 #
 Bootstrap: docker
-From: poldracklab/fmriprep:1.5.4
+From: poldracklab/fmriprep:20.0.7
 
 %post
 
