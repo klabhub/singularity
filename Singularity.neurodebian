@@ -103,3 +103,10 @@ MirrorURL: http://http.debian.net/debian/
     rm -Rf git-annex-remote-rclone
     
     
+    # GIT LFS
+    
+    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+    apt-get install git-lfs
+    git lfs install
+    
+    
