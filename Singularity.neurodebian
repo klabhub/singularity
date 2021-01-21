@@ -101,11 +101,5 @@ MirrorURL: http://http.debian.net/debian/
     git clone https://github.com/DanielDent/git-annex-remote-rclone
     cp git-annex-remote-rclone/git-annex-remote-rclone /usr/bin
     rm -Rf git-annex-remote-rclone
-    
-    
-    # GIT LFS
-    apt-get install -y apt-transport-https debian-archive-keyring
-    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
-    apt-get update && \
-    apt-get install -y git-lfs
+
     
