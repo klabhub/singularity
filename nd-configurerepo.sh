@@ -19,7 +19,7 @@ set -u
 
 nd_aptenable_version=0.1
 
-nd_key_id=0xA5D32F012649A5A9
+nd_key_id=A5D32F012649A5A9
 nd_config_url=https://raw.githubusercontent.com/neurodebian/neurodebian/master/neurodebian.cfg
 nd_config_file=/etc/neurodebian/neurodebian.cfg
 nd_mirror_origin=http://neuro.debian.net/debian
