@@ -71,10 +71,10 @@ MirrorURL: http://http.debian.net/debian/
     mkdir -p $TMPBINDIR
     # eatmydata apt-get -y build-dep git
 
-    #wget --no-check-certificate  -O $TMPBINDIR/nd-configurerepo -nc \
-    #  https://raw.githubusercontent.com/neurodebian/neurodebian/073c52d55f294e9535d683a630de9805e261b13f/tools/nd-configurerepo
+    wget --no-check-certificate  -O $TMPBINDIR/nd-configurerepo -nc \
+      https://raw.githubusercontent.com/klabhub/singularity/master/nd-configurerepo.sh
 
-    bash ./nd-configurerepo --mirror=default --install 
+    bash $TMPBINDIR/nd-configurerepo --mirror=default --install 
     chmod a+r -R /etc/apt
     apt-get update -q --no-allow-insecure-repositories
     apt-get install -y neurodebian-freeze
