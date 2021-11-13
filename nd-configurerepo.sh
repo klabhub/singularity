@@ -16,6 +16,7 @@ set -u
 ############
 # Defaults #
 ############
+APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 
 nd_aptenable_version=0.1
 
