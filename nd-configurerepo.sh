@@ -560,7 +560,9 @@ gpg --version | grep -q '^gpg (GnuPG) 1\.' || assure_command_from_package dirmng
 
 if LANG=C eval $ae_sudo apt-key export $nd_key_id 2>&1 1>/dev/null | grep -qe "nothing exported"; then
     print_verbose 1 "Fetching the key from the server"
-    eval_dry APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1 apt-key adv --no-tty --batch --recv-keys --keyserver hkps://keyserver.ubuntu.com $nd_key_id
+    APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
+    export APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE
+    eval_dry  apt-key adv --no-tty --batch --recv-keys --keyserver hkps://keyserver.ubuntu.com $nd_key_id
 fi
 
 
