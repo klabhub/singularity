@@ -563,6 +563,7 @@ if LANG=C eval $ae_sudo apt-key export $nd_key_id 2>&1 1>/dev/null | grep -qe "n
     APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
     export APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE
     #eval_dry  apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com $nd_key_id
+    gpg --recv-keys --keyserver hkp://keyserver.ubuntu.com $nd_key_id
 fi
 
 
