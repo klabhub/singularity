@@ -20,7 +20,7 @@ set -u
 
 nd_aptenable_version=0.1
 
-nd_key_id=A5D32F012649A5A9
+nd_key_id=0xA5D32F012649A5A9
 nd_config_url=https://raw.githubusercontent.com/neurodebian/neurodebian/master/neurodebian.cfg
 nd_config_file=/etc/neurodebian/neurodebian.cfg
 nd_mirror_origin=http://neuro.debian.net/debian
@@ -560,10 +560,11 @@ gpg --version | grep -q '^gpg (GnuPG) 1\.' || assure_command_from_package dirmng
 
 if LANG=C eval $ae_sudo apt-key export $nd_key_id 2>&1 1>/dev/null | grep -qe "nothing exported"; then
     print_verbose 1 "Fetching the key from the server"
-    APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
+        APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
     export APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE
     #eval_dry  apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com $nd_key_id
-    gpg --recv-keys --keyserver hkp://keyserver.ubuntu.com $nd_key_id
+    gpg --keyserver hkp://keyserver.ubuntu.com --recv $nd_key_id
+    gpg --export --armor $nd_key_id | apt-key add -
 fi
 
 
